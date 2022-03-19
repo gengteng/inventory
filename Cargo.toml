@@ -1,0 +1,26 @@
+[package]
+name = "inventory"
+version = "0.1.0"
+authors = ["Geng Teng <me@gteng.org>"]
+edition = "2021"
+description = "Redis module for inventory deduction"
+repository = "https://github.com/gengteng/inventory"
+readme = "README.md"
+license = "MIT"
+keywords = ["redis", "inventory", "flashsale"]
+categories = ["database-implementations"]
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+redis-module = "1.0.0"
+
+[lib]
+name = "inventory"
+crate-type = ["cdylib", "rlib"]
+
+[features]
+# Workaround to allow cfg(feature = "test") in redismodue-rs dependencies:
+# https://github.com/RedisLabsModules/redismodule-rs/pull/68
+# This requires running the tests with `--features test`
+test = ["redis-module/test"]
