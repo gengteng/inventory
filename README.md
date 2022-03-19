@@ -341,7 +341,7 @@ avg       min       p50       p95       p99       max
 
 ### Conclusion
 
-The performance of this module is only slightly better than using lua scripts, perhaps only more complex in-memory data structures are necessary to use the redis module, especially those that are more efficient after deserialization, such as [JSON](https://github.com/RedisJSON/RedisJSON).
+The performance of this module is only slightly better than using lua scripts. Maybe the redis module is only suitable for dealing with more complex in-memory data structures, especially those that are more efficient after deserialization, such as [JSON](https://github.com/RedisJSON/RedisJSON).
 
 ## License
 
